@@ -1,0 +1,118 @@
+// TOP LEVEL ENTITY
+
+module topLevel(
+     ///////// Clocks /////////
+      input     MAX10_CLK1_50, 
+      ///////// KEY /////////
+      input    [ 1: 0]   KEY,
+      ///////// SW /////////
+      input    [ 9: 0]   SW,
+      ///////// LEDR /////////
+      output   [ 9: 0]   LEDR,
+      ///////// HEX /////////
+      output   [ 7: 0]   HEX0,
+      output   [ 7: 0]   HEX1,
+      output   [ 7: 0]   HEX2,
+      output   [ 7: 0]   HEX3,
+      output   [ 7: 0]   HEX4,
+      output   [ 7: 0]   HEX5,
+      ///////// SDRAM /////////
+      output             DRAM_CLK,
+      output             DRAM_CKE,
+      output   [12: 0]   DRAM_ADDR,
+      output   [ 1: 0]   DRAM_BA,
+      inout    [15: 0]   DRAM_DQ,
+      output             DRAM_LDQM,
+      output             DRAM_UDQM,
+      output             DRAM_CS_N,
+      output             DRAM_WE_N,
+      output             DRAM_CAS_N,
+      output             DRAM_RAS_N,
+      ///////// VGA /////////
+      output             VGA_HS,
+      output             VGA_VS,
+      output   [ 3: 0]   VGA_R,
+      output   [ 3: 0]   VGA_G,
+      output   [ 3: 0]   VGA_B,
+      ///////// ARDUINO /////////
+      inout    [15: 0]   ARDUINO_IO,
+      inout              ARDUINO_RESET_N 
+);
+
+
+logic[9:0] DrawX, DrawY;
+logic reset;
+assign reset = 1'b0;
+
+logic hs, vs, pixel_clk, blank, sync, DrawX, DrawY;
+module  vga_controller (         .Clk(Clk),       // 50 MHz clock
+    .Reset(reset),     // reset signal
+   .hs(hs),        // Horizontal sync pulse.  Active low
+    .vs(vs),        // Vertical sync pulse.  Active low
+    .pixel_clk(pixel_clk), // 25 MHz pixel clock output
+    .blank(blank),     // Blanking interval indicator.  Active low.
+    .sync(sync),      // Composite Sync signal.  Active low.  We don't use it in this lab,
+    //   but the video DAC on the DE2 board requires an input for it.
+    .DrawX(DrawX),     // horizontal coordinate
+    .DrawY(DrawY) );   // vertical coordinate
+
+logic [9:0] drawNote;
+timersColumnTest(
+ .Clk(Clk),
+ .button0(KEY[0]),
+ .button1(KEY[1]),
+ .drawX(DrawX), .drawY(DrawY),
+ .drawNote(drawNote)
+);
+
+
+always_comb
+begin
+    if (drawNote != 10'h000) && (blank == 1'b1)
+    begin
+        VGA_R = 4'b1111;
+        VGA_B = 4'b1111;
+        VGA_G = 4'b1111;
+    end
+    else
+    begin
+        VGA_R = 4'b0000;
+        VGA_B = 4'b0000;
+        VGA_G = 4'b0000;
+    end
+end
+/*
+
+always_comb begin 
+	if (FGD_IDX[0] == 1'b1)
+	begin // LSB of index is 1
+		FGD_COLOR = Palette[(FGD_IDX[3:1])][24:13]; // Color 1 is in 24:13
+	end  
+	else  
+	begin // LSB of index is 0
+		FGD_COLOR = Palette[(FGD_IDX[3:1])][12:1]; // Color 0 is in 12:1
+	end
+end
+
+
+
+logic [31:0] Palette [0:7]; // 8 32-bit words for color palette
+// arranged 0:7 since addresses are going to be done that way from NIOS II
+always_ff @ (posedge CLK)
+begin
+	if(writeREG)
+	begin // Addressing is really weird
+		if (AVL_BYTE_EN[3] == 1)
+			Palette[(AVL_ADDR[2:0])][24:21] <= AVL_WRITEDATA[27:24];
+		if (AVL_BYTE_EN[2] == 1)
+			Palette[(AVL_ADDR[2:0])][20:13] <= AVL_WRITEDATA[23:16];
+		if (AVL_BYTE_EN[1] == 1)
+			Palette[(AVL_ADDR[2:0])][12:9] <= AVL_WRITEDATA[11:8];
+		if (AVL_BYTE_EN[0] == 1)
+			Palette[(AVL_ADDR[2:0])][8:1] <= AVL_WRITEDATA[7:0];
+	end
+end
+*/
+
+
+endmodule

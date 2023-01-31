@@ -1,0 +1,10 @@
+
+
+
+module timersColumnTest(
+input Clk,
+input button0,
+input button1,
+output LED[9:0]
+);
+

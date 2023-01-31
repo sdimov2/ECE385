@@ -1,0 +1,28 @@
+module ProgramCounter(
+	input logic Clk, LD_PC,
+	input logic [15:0] MARMUX, datapath, // Selectable options are marmux, datapath, and increment
+	input logic [1:0] PCMUX, // PC mux select signal
+	output logic [15:0] PC
+);
+
+logic [15:0] PC_next;
+
+always_ff @ (posedge LD_PC) // Change to posedge LD_PC & Clk if necessary
+// or if necessary a synchronous load as an if statement
+begin
+	PC <= PC_next;
+end
+
+always_comb
+begin
+	unique case (PCMUX)
+		2'b00		:	PC_next = PC + 16'h0001; // increment by 1
+		2'b01		:	PC_next = MARMUX; // Put marmux sum in PC
+		2'b10		:	PC_next = datapath; // Put contents of datapath in PC
+		default	:	PC_next = 16'h0000; // We can change this default in the future
+	endcase
+
+end
+
+
+endmodule 

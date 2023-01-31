@@ -1,0 +1,60 @@
+/*
+Testing the basic counter-- count up
+N registers per counter, counts for 2^N - 1 cycles
+
+
+This module houses multiple single-timer units. Use it as a top-level.
+
+
+*/
+
+module timerTest0#
+(
+		parameter int
+		N = 5
+)
+(
+	input button, Clk, 		// Start signal to change to counting state, clock signal
+	output countActive, 		// Is equal to the state for whether it's counting
+	output countEnd, 			// Goes high when T == T'
+	output [N-1:0] countT 		// Values in counter
+);
+
+logic start, input0;
+logic [2:0] startCount;
+
+assign input0 = ~button;
+
+initial
+begin
+startcount <= 2'b00;
+end
+
+always_ff@(posedge input0)
+begin
+	startCount <= 2'b01;
+end
+
+
+always_ff@(posedge Clk)
+begin
+	unique case (startCount)
+	2'b00 :
+	2'b01 :
+		startCount <= 2'b10;
+	2'b10 : 
+		startCount <= 2'b11;
+	2'b11 : 
+		startCount <= 2'b11;
+	endcase
+end
+
+singleTimer0 myTimer0
+(
+	.start(start), .Clk(Clk), 		// Start signal to change to counting state, clock signal
+	.countActive(countActive), 		// Is equal to the state for whether it's counting
+	.countEnd(countEnd), 			// Goes high when T == T'
+	.countT(countT) 		// Values in counter
+);
+
+endmodule

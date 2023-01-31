@@ -1,0 +1,35 @@
+
+
+module datapath(
+	input logic Clk,
+	input logic [15:0] DataPC, DataMDR, DataALU, DataMARMUX, // Different data
+	input logic SelPC, SelMDR, SelALU, SelMARMUX, // Data selected by DataBus one-hot signals
+	output logic [15:0] DataBus
+);
+
+always_comb
+begin
+	if (DataPC)
+		begin
+			DataBus = DataPC;
+		end
+	else if (DataMDR)
+		begin
+			DataBus = DataMDR;
+		end
+	else if (DataALU)
+		begin
+			DataBus = DataALU;
+		end
+	else if (DataMARMUX)
+		begin
+			DataBus = DataMARMUX;
+		end
+	else
+		begin
+			DataBus = 16'bxxxxxxxxxxxxxxxx;
+		end
+end
+
+
+endmodule

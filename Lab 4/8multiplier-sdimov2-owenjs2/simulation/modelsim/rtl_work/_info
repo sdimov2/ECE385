@@ -1,0 +1,236 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/simulation/modelsim
+vadder2
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1633408747
+!i10b 1
+!s100 OFh?6KlU<OS5:il8Y=klN0
+I`]JLZo7OmQ66a=G=_TL:z0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder2_sv_unit
+S1
+R0
+Z4 w1632716930
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/adder2.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/adder2.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1633408747.000000
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/adder2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/adder2.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2}
+Z9 tCvgOpt 0
+vcontrol
+R1
+R2
+!i10b 1
+!s100 z:H@8<YJbzEC]b4Pm=GNM3
+Ij8J6b3hE5KfXjzUVJTbFX1
+R3
+!s105 control_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/control.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/control.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/control.sv|
+!i113 1
+R7
+R8
+R9
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 jK99X>zm`jheH>XE<L^T>1
+Im=FcPH@njA:hnHLB[K]CK0
+R3
+!s105 full_adder_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder.sv|
+!i113 1
+R7
+R8
+R9
+vfull_adder_4
+R1
+R2
+!i10b 1
+!s100 WVXMjcU0lI1OCQVM7cji?3
+IDi<TR:6RB8bG`BWFE[IU33
+R3
+!s105 full_adder_4_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder_4.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder_4.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/full_adder_4.sv|
+!i113 1
+R7
+R8
+R9
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 F7dDJLKONLDlAhT4ll@HA3
+Ih7oDM<R^D9P[kCZR_84FN0
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/HexDriver.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/HexDriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/HexDriver.sv|
+!i113 1
+R7
+R8
+R9
+n@hex@driver
+vprecomp_CRA
+R1
+R2
+!i10b 1
+!s100 `g`zEFiS<kkd9QVh56J3_3
+Ik3>[7DC^T<WZAYg=dFcRa2
+R3
+!s105 precomp_CRA_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/precomp_CRA.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/precomp_CRA.sv
+L0 3
+R5
+r1
+!s85 0
+31
+Z10 !s108 1633408746.000000
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/precomp_CRA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/precomp_CRA.sv|
+!i113 1
+R7
+R8
+R9
+nprecomp_@c@r@a
+vreg_17
+R1
+Z11 !s110 1633408746
+!i10b 1
+!s100 BKhoVIj@F@Jo4J2PP=1d[3
+Iomz6b5me3=HcdO_;>6QVH1
+R3
+!s105 reg_17_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/reg_17.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/reg_17.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/reg_17.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/reg_17.sv|
+!i113 1
+R7
+R8
+R9
+vselect_adder
+R1
+R11
+!i10b 1
+!s100 ^heS>=TU_MKlE<4acGXjc2
+IlhB5[AbGVclg6L0ZiM9lM3
+R3
+!s105 select_adder_sv_unit
+S1
+R0
+w1633390728
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/select_adder.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/select_adder.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/select_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/select_adder.sv|
+!i113 1
+R7
+R8
+R9
+vtestbench
+R1
+!s110 1633408766
+!i10b 1
+!s100 Y^dgo;d7;[24[QM>SzEBg1
+IFYB^bD>dFVLXP:5omNjUO2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1633408719
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/testbench.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1633408766.000000
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/testbench.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/ECE-385/Lab 4/8multiplier-sdimov2-owenjs2/testbench.sv|
+!i113 1
+o-work work
+R9

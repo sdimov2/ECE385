@@ -1,0 +1,45 @@
+
+
+
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_spi.h"
+#include "altera_avalon_spi_regs.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_irq.h"
+
+#include "text_mode_vga_color.h"
+
+int main(){
+
+	textVGAColorClr();
+
+	char color_string[80] = "The Last Man -- Abridged Version";
+    int fg, bg, x, y;
+    fg = 0x01;
+	bg = 0x00;
+
+	for (y = 0; y < 31; y++){
+		//textVGADrawColorText (color_string, x, y, bg, fg);
+		textVGADrawColorText (color_string, 0, y, 0x00, 0x01);
+		usleep (5000);
+
+		textVGADrawColorText (color_string, 40, y, 0x00, 0x01);
+		usleep (5000);
+	}
+	char mystring1[2] = "A";
+	char mystring2[2] = "H";
+
+	for (x = 0; x < 3; x++){
+		textVGADrawColorText (mystring1, x, 31, 0x01, 0x00);
+		usleep (5000);
+	}
+	for (x = 3; x < 80; x++){
+		textVGADrawColorText (mystring2, x, 31, 0x01, 0x00);
+		usleep (5000);
+	}
+
+	textVGAColorScreenSaver();
+
+	while(1);
+}

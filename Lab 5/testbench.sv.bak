@@ -1,0 +1,92 @@
+module testbench();
+
+timeunit 10ns;
+
+timeprecision 1ns;
+
+<<<<<<< Updated upstream
+logic [15:0]    SW, Data,  ADDR;
+=======
+logic [15:0]    SW;
+>>>>>>> Stashed changes
+logic           Clk, Reset, Run, Continue;
+logic           OE, CE, UB, LB, WE;
+logic [11:0]    LED;
+logic [6:0]     HEX0, HEX1, HEX2, HEX3;
+logic [15:0]    PC_out, MAR_out, MDR_out, IR_out;
+
+slc3_testtop test(.*);
+<<<<<<< Updated upstream
+
+always_comb begin : INTERNAL_MONITORING
+    PC_out = test.slc.PC; // monitor gated signals, including IR
+    IR_out = test.slc.IR;
+    MAR_out = test.slc.MAR;
+    MDR_out = test.slc.MDR;
+=======
+
+always begin : CLOCK_GENERATION
+#1 Clk = ~ Clk;
+end
+
+always_comb begin : INTERNAL_MONITORING
+    PC_out = test.slc3.PC;
+    MAR_out = test.slc3.MAR;
+    MDR_out = test.slc3.MDR;
+    IR_out = test.slc3.IR;
+>>>>>>> Stashed changes
+end
+
+
+initial begin: CLOCKINIT
+   Clk 	= 0;
+end 
+
+always begin : CLOCKGEN
+#1 Clk 	= ~ Clk;
+end
+
+<<<<<<< Updated upstream
+initial begin: START
+
+   SW 				= 16'h0000; // start all at 0
+   Reset 			= 0;
+   Run 				= 0;
+	Continue 		= 0;
+	
+   #2    Reset 	= 1; // Reset machine then start run
+	#4 	Reset		= 0;
+	
+   #2 Run 			= 1;
+=======
+    Reset = 0;
+    Run = 1;
+    Continue = 1;
+    SW = 16'h0000;
+    
+    #2    Reset = 1;
+    #2    Run = 0;
+    #2 Run = 1;
+>>>>>>> Stashed changes
+    
+   #40 Continue 	= 0; // Delay for continue signal pulses
+   #2 Continue 	= 1;
+
+   #40 Continue 	= 0;
+   #2 Continue 	= 1;
+	 
+	#40 Continue 	= 0;
+	#2 Continue 	= 1;
+
+	#40 Continue 	= 0;
+	#2 Continue 	= 1;
+	 
+	#40 Continue 	= 0;
+	#2 Continue 	= 1;
+
+	#40 Continue 	= 0;
+	#2 Continue 	= 1;
+    
+end
+
+endmodule

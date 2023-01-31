@@ -1,0 +1,262 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/simulation/modelsim
+vcompute
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1632496698
+!i10b 1
+!s100 i=]6932U1_OWO<5E?3HbR1
+I0fCh4Il23EMeXn`_F4BVe3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 compute_sv_unit
+S1
+R0
+Z4 w1631232304
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/compute.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/compute.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1632496698.000000
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/compute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/compute.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit}
+Z9 tCvgOpt 0
+vcontrol
+R1
+R2
+!i10b 1
+!s100 `[Abe29g75gPCLENNoebO3
+Ia[l]h@M=JAVIK2eQFCkGT2
+R3
+!s105 Control_sv_unit
+S1
+R0
+w1631262888
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Control.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Control.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Control.sv|
+!i113 1
+R7
+R8
+R9
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 ^DddjRd7Wla]U<SlP;mT@0
+I;]P@]=0^[feI?oPaI9hne3
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/HexDriver.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/HexDriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z10 !s108 1632496697.000000
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/HexDriver.sv|
+!i113 1
+R7
+R8
+R9
+n@hex@driver
+vProcessor
+R1
+R2
+!i10b 1
+!s100 4=XmYbYK^>DVlfebV_:kf1
+I0kHbf9j3ChO1LAk`_AU8`3
+R3
+!s105 Processor_sv_unit
+S1
+R0
+w1631299419
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Processor.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Processor.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Processor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Processor.sv|
+!i113 1
+R7
+R8
+R9
+n@processor
+vreg_4
+R1
+Z11 !s110 1632496697
+!i10b 1
+!s100 9Q;M_bZYcOBn:M<I6<c8k0
+I]F5ESMo@3<UChFe<73lPL3
+R3
+!s105 Reg_4_sv_unit
+S1
+R0
+w1631262052
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Reg_4.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Reg_4.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Reg_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Reg_4.sv|
+!i113 1
+R7
+R8
+R9
+vregister_unit
+R1
+R2
+!i10b 1
+!s100 c?`W04Obk>`oYn_UgA>oj0
+I]R3?Y24IK7@NRS2KcKdXV2
+R3
+!s105 Register_unit_sv_unit
+S1
+R0
+w1631262077
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Register_unit.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Register_unit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Register_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Register_unit.sv|
+!i113 1
+R7
+R8
+R9
+vrouter
+R1
+R11
+!i10b 1
+!s100 lIdD9@`9>^lYia[Dkg2aV0
+I`i5=GDACGHSajV;B=g=Q92
+R3
+!s105 Router_sv_unit
+S1
+R0
+R4
+8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Router.sv
+FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Router.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Router.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Router.sv|
+!i113 1
+R7
+R8
+R9
+vsync
+R1
+R11
+!i10b 1
+!s100 2W5Vz0:F6ckE2`eJOTK5l1
+IfDzUVTcW7[MQL3Y3;9Q]U2
+R3
+Z12 !s105 Synchronizers_sv_unit
+S1
+R0
+Z13 w1631232305
+Z14 8C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Synchronizers.sv
+Z15 FC:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Synchronizers.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R10
+Z16 !s107 C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Synchronizers.sv|
+Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit|C:/Users/owent/OneDrive/Documents/Academics/Fall 2021/ECE 385/Lab 2/logic_processor_4bit/Synchronizers.sv|
+!i113 1
+R7
+R8
+R9
+vsync_r0
+R1
+R11
+!i10b 1
+!s100 IGd9f_F;JNjVBLQ@DAnD10
+IP3kl?UJFH<KOn]RMgmO]B1
+R3
+R12
+S1
+R0
+R13
+R14
+R15
+L0 18
+R5
+r1
+!s85 0
+31
+R10
+R16
+R17
+!i113 1
+R7
+R8
+R9
+vsync_r1
+R1
+R11
+!i10b 1
+!s100 1CXiH1DYDbAUS69Ee2j060
+IzM^Z;e:6k_c>2LPe5_5Sf2
+R3
+R12
+S1
+R0
+R13
+R14
+R15
+L0 39
+R5
+r1
+!s85 0
+31
+R10
+R16
+R17
+!i113 1
+R7
+R8
+R9

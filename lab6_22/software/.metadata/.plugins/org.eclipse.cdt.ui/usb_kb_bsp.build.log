@@ -1,0 +1,7 @@
+06:45:45 **** Build of configuration Nios II for project usb_kb_bsp ****
+make all 
+makefile:559: Warning: SOPC File ../../lab62soc.sopcinfo could not be found.
+[BSP build complete]
+
+06:45:45 Build Finished (took 795ms)
+

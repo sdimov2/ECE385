@@ -1,0 +1,65 @@
+
+module strumWithinRange#(
+	parameter int numBits = 10,
+	center = 10'h1F4,
+	tolerance = 10'018 
+)
+(
+	input timerActive, frameClk, strum,
+	input [numBits-1:0] Y
+	output [numBits-1:0] score,
+	output add
+	);
+
+logic [numBits-1:0] leftDiff, rightDiff, pointsDiff;
+logic withinLeft, withinRight, withinBounds;
+always_comb
+begin
+	leftDiff = center - Y; // Difference between center and current location
+	rightDiff = Y - center; // Difference between current location and center
+	
+	withinLeft = (leftDiff > 10'h000 && leftDiff <= tolerance) ? 1'b1 : 1'b0;
+	withinRight = (rightDiff >= 10'h000 && rightDiff <= tolerance) ? 1'b1 : 1'b0;	
+	
+	case ({withinLeft, withinRight})
+	2'b00:
+		withinBounds = 1'b0;
+	2'b01:
+		withinBounds = timerActive; // If within bounds it should be 1
+	2'b10:
+		withinBounds = timerActive;
+	2'b11:
+		withinBounds = 1'b0;
+	endcase
+end
+
+logic hitPositive, hitPulse;
+always_ff@(posedge frameClk)
+begin
+	hitPositive = (hitPositive & withinBounds) | (strum & 
+end
+
+always_ff@(posedge frameClk)
+begin
+	case ({withinLeft, withinRight})
+	2'b00:
+		withinBounds = 1'b0;
+	2'b01:
+		withinBounds = 1'b1;
+	2'b10:
+		withinBounds = 1'b1;
+	2'b11:
+		withinBounds = 1'b0;
+	endcase
+end
+
+
+logic strumReg, strumPulse; // Use of register makes pulse on rising edge of strum
+always_ff@(posedge frameClk) 
+begin
+	strumReg <= strum;
+end
+assign strumPulse = ~strumReg & strum;
+
+logic validLoc;
+assign validLoc = timerActive & 

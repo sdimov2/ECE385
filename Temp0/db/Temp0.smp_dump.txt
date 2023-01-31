@@ -1,0 +1,7 @@
+
+State Machine - |timerTest1|startCount
+Name startCount.011 startCount.010 startCount.001 startCount.000 
+startCount.000 0 0 0 0 
+startCount.001 0 0 1 1 
+startCount.010 0 1 0 1 
+startCount.011 1 0 0 1 

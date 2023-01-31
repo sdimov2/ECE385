@@ -1,0 +1,215 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/simulation/modelsim
+vdatapath
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1633116750
+!i10b 1
+!s100 MIOHMa5i:fRedebm3;@lc1
+ICb0;OZlzH<WD^jO9zi11e3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 datapath_sv_unit
+S1
+R0
+Z4 w1633070646
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/datapath.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/datapath.sv
+L0 3
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1633116750.000000
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/datapath.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5}
+Z9 tCvgOpt 0
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 F7dDJLKONLDlAhT4ll@HA3
+IzE?E62N@@]k^NdL5L6W620
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+Z10 w1633055923
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/HexDriver.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/HexDriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/HexDriver.sv|
+!i113 1
+R7
+R8
+R9
+n@hex@driver
+vISDU
+R1
+R2
+!i10b 1
+!s100 Hb1DOBAdLdQiKbDkFXbV?1
+I0QeYUME2kSC1he<Njb^MJ0
+R3
+!s105 ISDU_sv_unit
+S1
+R0
+R4
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ISDU.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ISDU.sv
+L0 19
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ISDU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ISDU.sv|
+!i113 1
+R7
+R8
+R9
+n@i@s@d@u
+vMDR_M
+R1
+R2
+!i10b 1
+!s100 KYZG9LUe;=c_g8MnRzW[S0
+ISTOD;zdAj4CbT7<=6F1W<3
+R3
+!s105 MEM_sv_unit
+S1
+R0
+w1633073917
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/MEM.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/MEM.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/MEM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/MEM.sv|
+!i113 1
+R7
+R8
+R9
+n@m@d@r_@m
+vMem2IO
+R1
+R2
+!i10b 1
+!s100 ]Q:NN9GIUgNPLn_MG6U5k1
+INzN0NQA_X[mN1WLLDeaF01
+R3
+!s105 Mem2IO_sv_unit
+S1
+R0
+R10
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/Mem2IO.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/Mem2IO.sv
+L0 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/Mem2IO.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/Mem2IO.sv|
+!i113 1
+R7
+R8
+R9
+n@mem2@i@o
+vProgramCounter
+R1
+Z11 !s110 1633116751
+!i10b 1
+!s100 YIn[N9T<ONH=<CBKcdkeZ1
+II^NVFY4M]CZ>Lh>`Q8@=81
+R3
+!s105 ProgramCounter_sv_unit
+S1
+R0
+R4
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ProgramCounter.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ProgramCounter.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ProgramCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ProgramCounter.sv|
+!i113 1
+R7
+R8
+R9
+n@program@counter
+vslc3
+R1
+R11
+!i10b 1
+!s100 0_IfKXKO>ST;i6V4LdPDj3
+Ii?V>`lNzjUV:ZPP_=[n8e0
+R3
+!s105 slc3_sv_unit
+S1
+R0
+w1633113249
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/slc3.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/slc3.sv
+L0 20
+R5
+r1
+!s85 0
+31
+Z12 !s108 1633116751.000000
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/slc3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/slc3.sv|
+!i113 1
+R7
+R8
+R9
+vtestbench
+R1
+R11
+!i10b 1
+!s100 JaKdlc5LND?Vja?jbJ;N^1
+IFUcj4URjL3b?OHlWTz^^k2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1633116684
+8C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/testbench.sv
+FC:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5|C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/testbench.sv|
+!i113 1
+R7
+R8
+R9

@@ -1,0 +1,6 @@
+10:50:11 **** Clean-only build of configuration Nios II for project GuitarHero_bsp ****
+make clean 
+[BSP clean complete]
+
+10:50:12 Build Finished (took 1s.124ms)
+

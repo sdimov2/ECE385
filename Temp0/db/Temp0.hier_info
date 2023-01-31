@@ -1,0 +1,27 @@
+|timerTest1
+button => always1.IN0
+Clk => Clk.IN1
+countActive <= singleTimer0:myTimer0.countActive
+countEnd <= singleTimer0:myTimer0.countEnd
+countT[0] <= singleTimer0:myTimer0.countT
+countT[1] <= singleTimer0:myTimer0.countT
+countT[2] <= singleTimer0:myTimer0.countT
+countT[3] <= singleTimer0:myTimer0.countT
+countT[4] <= singleTimer0:myTimer0.countT
+start0 <= start.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timerTest1|singleTimer0:myTimer0
+start => timerActive.OUTPUTSELECT
+Clk => timerClk.IN1
+Clk => timerActive.CLK
+Clk => timerEnd.CLK
+countActive <= timerActive.DB_MAX_OUTPUT_PORT_TYPE
+countEnd <= timerEnd.DB_MAX_OUTPUT_PORT_TYPE
+countT[0] <= timerCount[0].DB_MAX_OUTPUT_PORT_TYPE
+countT[1] <= timerCount[1].DB_MAX_OUTPUT_PORT_TYPE
+countT[2] <= timerCount[2].DB_MAX_OUTPUT_PORT_TYPE
+countT[3] <= timerCount[3].DB_MAX_OUTPUT_PORT_TYPE
+countT[4] <= timerCount[4].DB_MAX_OUTPUT_PORT_TYPE
+
+

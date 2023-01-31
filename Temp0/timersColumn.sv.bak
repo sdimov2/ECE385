@@ -1,0 +1,7 @@
+
+/*
+Code for a single column of guitar hero notes
+
+Contains 6 note timers in a column, tracks whether the pixel drawn is should draw a note
+
+*/

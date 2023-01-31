@@ -1,0 +1,15 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/MEM.sv}
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/HexDriver.sv}
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/Mem2IO.sv}
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ISDU.sv}
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/datapath.sv}
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/ProgramCounter.sv}
+vlog -sv -work work +incdir+C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab\ 5 {C:/Users/sdimo_000/OneDrive/Documents/Desktop/lab5/ECE-385/Lab 5/slc3.sv}
+

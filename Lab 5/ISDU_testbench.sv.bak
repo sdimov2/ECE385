@@ -1,0 +1,45 @@
+ISDU test(.*);
+
+initial begin: CLOCKINIT
+   Clk 	= 0;
+end 
+
+always begin : CLOCKGEN
+#1 Clk 	= ~ Clk;
+end
+
+initial begin: START
+
+   Reset 			= 1; // At this level these three signals are active low
+   Run 				= 1;
+	Continue 		= 1;
+	
+   #2    Reset 	= 0; // Reset machine then start run
+	#4 	Reset		= 1;
+	
+   #2 Run 			= 0;
+	#4 Run			= 1;
+    
+   #4 Continue 	= 0; // Delay for continue signal pulses
+	//
+	// Set the opcode to test different sequences
+   #20 Continue 	= 1;
+
+   #4 Continue 	= 0;
+   #20 Continue 	= 1;
+	 
+	#4 Continue 	= 0;
+	#20 Continue 	= 1;
+
+	#4 Continue 	= 0;
+	#20 Continue 	= 1;
+	 
+	#4 Continue 	= 0;
+	#20 Continue 	= 1;
+
+	#4 Continue 	= 0;
+	#20 Continue 	= 1;
+    
+end
+
+endmodule
