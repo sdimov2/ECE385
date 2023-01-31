@@ -1,0 +1,126 @@
+32 or so fixed function blocks which will generate up to 5 notes.
+
+sustains will not be supported with these blocks, sustain blocks wll have to
+be added later to support them.
+
+Each block will have its own 32 bit memory word to describe it. The format is
+as so: 
+
+[15:7][ 6 ][ 5  ][ 4 ][ 3 ][ 2 ][ 1 ][ 0 ]
+[ypos][TAP][HOPO][ORG][BLU][YEL][RED][GRN]
+
+The blocks will take in the current x and y pos and will output a color based
+on its memory word.
+
+It will be possible for the blocks to overlap. In this case, the block
+with the lower index should show up on top. These should correspond to
+earlier notes, such that the note with the lower y position or lower time
+position will always appear on top.	
+
+
+
+How should notes be drawn to the screen? Notes will be read from the chart
+file into an as yet undetermined struct which will includ the time of the note,
+as well as what frets are held down.
+
+To convert these into notes on the screen, we need to know what time on the
+song we are. We then need to take the first note and see if it should be on
+screen. We do this by comparing its time value with the current time value.
+If the note should be on screen, then we need to convert the time value to 
+a y position. We can first take the difference between the note's time value
+and the current time value. A difference of 0 means it needs to be strummed,
+and a difference of `tmax` means it needs to be at the top of the screen. The
+difference needs to be divided by a factor which is based on the note speed,
+which will then give the y position on the screen, from 0 to 480. Note that
+the notes need to be strummed somewhere above the bottom of the screen, say
+at y = 400. This means at time 0 they need to be at y=400, and if the note
+time becomes less than the current time, i.e. the notes time has already 
+passed, then it should show up below the strum line and eventually go off screen.
+
+So basically, if the difference between the note time and the current time is t,
+then the position on the screen is 400 - t/speed.
+
+If the note is strummed or goes above y=480, then the note object should be
+cleared and assigned to the next note value from the list.
+
+
+
+the chart file time stamps are kind of confusing, but here is how they work.
+
+At the top of the chart file, in the [Song] block, there is a value called
+resolution. This is the number if ticks per beat. By default it is 192.
+Using this value, you can convert all of the time values into beats.
+
+In the section marked [SyncTrack], the tempo changes are given in bpm*100,
+i.e. `0 = B 164000` means that at beat 0 (0/192), the tempo is 164 beats
+per minute. in the same song, `1536 = B 165000` means that at beat 8
+(1536/192), the tempo changes to 165 beats per minute.
+
+at a given timestamp, say 4608.
+
+There is a temp change 1536 beats in, so first we have to calculate the time
+to then. That is 8 beats in, and there is 164 beats per minute. That is 
+1/164 minutes per beat, 0.365853658537 seconds per beat, and 365.853658537ms
+per beat So that would be 8 beats times 365.853658537ms per beat, 
+2926.8292683ms.
+
+The note is at 4608, which is 3072 units after the tempo change, which is 16
+beats. At the new temp of 165 beats per minute, thats 363.636363636 ms per beat
+or an additional 5818.18181818ms. Add those together and we get 8745.0110865ms.
+
+Listen to the song (hard to explain, by the strokes) and the first note does
+occur over 8 seconds into the scong.
+
+Lets try and come up with a formula.
+
+We have note time from the chart in note_beats, and the true time in note_ms.
+first, we look through each time change and see if we are past it.
+We could have these precalculated when we load the chart, so I'll
+call them timechange_beat[n] and timechange_ms[n]. 
+
+
+int note_beats;
+int note_ms;
+
+
+int last_timechange
+for(last_timechange = 0; i < time_changes; last_timechange++) {
+	if (note_beats > timechange_beat[last_timechange]){					//if the note is after a time change
+		note_ms += timechange_ms[ilast_timechange];						//add the time between the last time changes
+	}
+}
+
+int note_offset = note_beats - timechange_beat[last_timechange];			//beats since last keychange
+
+int time_offset = ( 60000 *  note_offset)/(tempo[last_timechange] * precision);	//precision is 192
+
+note_ms += time_offset;			//and that is the final time of the note.
+
+
+
+How long should the notes appear on the screen?
+Well I just came up with this: The time on screen target is 1/x, where x is the
+note speed. since there are 480 vertical pixels, the time for each value on the 
+screen is 1/(480*x). In reality, this is all in ms, so it should be 1000/480*x,
+and we want x to be an integer so lets scale it up by 10: 10000ms/480px*(x)
+If notespeed is 10, which seems like a good number, then we get
+10000/4800 = ms/pixel = 0.48pixel/ms, which means it will cross the screen in 
+1 second. At a higher notespeed of 12, it is slightly faster at 0.576pixel/ms.
+At that speed it will cross the screen in 0.833 seconds (10/12).
+
+
+how should the game actually work?
+
+Well we really only need to care about the lat note, like the furthest note
+down the screen, since that is the only one that you can hit anyway. There
+are two ways that you could go around it. The first way is with an interrupt.
+Whenever a button is pressed (either in "controller" mode or regular), then
+check if the last note is within the hit window. If it is, and the buttons
+currently held down match the note, then the note is considered hit, and it can
+get sent to the back of the list. In "controller mode" then there isn't such
+thing as a miss, but if there is a guitar then you can miss.
+
+The second way is similar except we just run the test every frame no matter what.
+
+I think I will start with the second, dumb way, and then if that works I can look
+into doing interrutps.

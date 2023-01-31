@@ -1,0 +1,44 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst fpga_guitar_hero_soc.nios2_gen2_0.cpu -pg 1
+preplace inst fpga_guitar_hero_soc.nios2_gen2_0.clock_bridge -pg 1
+preplace inst fpga_guitar_hero_soc.sysid -pg 1 -lvl 3 -y 970
+preplace inst fpga_guitar_hero_soc.jtag_uart_0 -pg 1 -lvl 3 -y 770
+preplace inst fpga_guitar_hero_soc.usb_irq -pg 1 -lvl 3 -y 1350
+preplace inst fpga_guitar_hero_soc.hex_digits -pg 1 -lvl 3 -y 130
+preplace inst fpga_guitar_hero_soc.chip_ram -pg 1 -lvl 3 -y 1550
+preplace inst fpga_guitar_hero_soc.clk_0 -pg 1 -lvl 1 -y 530
+preplace inst fpga_guitar_hero_soc.usb_gpx -pg 1 -lvl 3 -y 1250
+preplace inst fpga_guitar_hero_soc.spi_0 -pg 1 -lvl 3 -y 550
+preplace inst fpga_guitar_hero_soc.sdram_pll -pg 1 -lvl 3 -y 1050
+preplace inst fpga_guitar_hero_soc.sdram -pg 1 -lvl 3 -y 1130
+preplace inst fpga_guitar_hero_soc.nios2_gen2_0.reset_bridge -pg 1
+preplace inst fpga_guitar_hero_soc -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst fpga_guitar_hero_soc.i2c_0 -pg 1 -lvl 3 -y 330
+preplace inst fpga_guitar_hero_soc.leds -pg 1 -lvl 3 -y 870
+preplace inst fpga_guitar_hero_soc.usb_timer -pg 1 -lvl 3 -y 670
+preplace inst fpga_guitar_hero_soc.timer_0 -pg 1 -lvl 3 -y 450
+preplace inst fpga_guitar_hero_soc.VGA_text_mode_controller_0 -pg 1 -lvl 3 -y 30
+preplace inst fpga_guitar_hero_soc.nios2_gen2_0 -pg 1 -lvl 2 -y 400
+preplace inst fpga_guitar_hero_soc.frets_pio -pg 1 -lvl 3 -y 230
+preplace inst fpga_guitar_hero_soc.usb_rst -pg 1 -lvl 3 -y 1450
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)fpga_guitar_hero_soc.usb_irq,(SLAVE)usb_irq.external_connection) 1 0 3 NJ 1380 NJ 1380 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)frets_pio.external_connection,(SLAVE)fpga_guitar_hero_soc.frets_pio_wire) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc INTERCONNECT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)VGA_text_mode_controller_0.AVL,(SLAVE)leds.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)sdram.s1,(SLAVE)usb_gpx.s1,(SLAVE)usb_rst.s1,(SLAVE)hex_digits.s1,(SLAVE)frets_pio.s1,(SLAVE)sysid.control_slave,(SLAVE)i2c_0.csr,(SLAVE)usb_timer.s1,(SLAVE)timer_0.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)nios2_gen2_0.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)usb_irq.s1,(SLAVE)chip_ram.s1,(SLAVE)spi_0.spi_control_port,(SLAVE)sdram_pll.pll_slave) 1 1 2 380 1520 760
+preplace netloc FAN_OUT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)jtag_uart_0.irq,(SLAVE)timer_0.irq,(SLAVE)usb_timer.irq,(SLAVE)spi_0.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)i2c_0.interrupt_sender) 1 2 1 780
+preplace netloc FAN_OUT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)frets_pio.clk,(SLAVE)usb_gpx.clk,(SLAVE)usb_rst.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)spi_0.clk,(SLAVE)sysid.clk,(SLAVE)i2c_0.clock,(SLAVE)jtag_uart_0.clk,(SLAVE)usb_timer.clk,(MASTER)clk_0.clk,(SLAVE)usb_irq.clk,(SLAVE)chip_ram.clk1,(SLAVE)VGA_text_mode_controller_0.clock,(SLAVE)leds.clk,(SLAVE)hex_digits.clk,(SLAVE)timer_0.clk,(SLAVE)sdram_pll.inclk_interface) 1 1 2 320 1400 820
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)fpga_guitar_hero_soc.sdram_wire,(SLAVE)sdram.wire) 1 0 3 NJ 1200 NJ 1200 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)spi_0.external,(SLAVE)fpga_guitar_hero_soc.spi_0_external) 1 0 3 NJ 600 NJ 580 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)fpga_guitar_hero_soc.i2c_0_i2c_serial,(SLAVE)i2c_0.i2c_serial) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc POINT_TO_POINT<net_container>fpga_guitar_hero_soc</net_container>(MASTER)sdram_pll.c0,(SLAVE)sdram.clk) 1 2 2 840 1240 1120
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)VGA_text_mode_controller_0.vga,(SLAVE)fpga_guitar_hero_soc.vga) 1 0 3 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)fpga_guitar_hero_soc.usb_rst,(SLAVE)usb_rst.external_connection) 1 0 3 NJ 1480 NJ 1480 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)usb_gpx.external_connection,(SLAVE)fpga_guitar_hero_soc.usb_gpx) 1 0 3 NJ 1280 NJ 1280 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)fpga_guitar_hero_soc.leds_wire,(SLAVE)leds.external_connection) 1 0 3 NJ 900 NJ 900 NJ
+preplace netloc INTERCONNECT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)sysid.reset,(SLAVE)sdram.reset,(SLAVE)frets_pio.reset,(SLAVE)usb_irq.reset,(MASTER)clk_0.clk_reset,(SLAVE)chip_ram.reset1,(SLAVE)sdram_pll.inclk_interface_reset,(SLAVE)usb_timer.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)hex_digits.reset,(SLAVE)usb_gpx.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)VGA_text_mode_controller_0.reset,(SLAVE)spi_0.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)leds.reset,(SLAVE)i2c_0.reset_sink,(SLAVE)timer_0.reset,(SLAVE)usb_rst.reset) 1 1 2 340 1500 800
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)fpga_guitar_hero_soc.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)hex_digits.external_connection,(SLAVE)fpga_guitar_hero_soc.hex_digits_wire) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(SLAVE)clk_0.clk_in,(SLAVE)fpga_guitar_hero_soc.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>fpga_guitar_hero_soc</net_container>(MASTER)sdram_pll.c1,(MASTER)fpga_guitar_hero_soc.sdram_clk) 1 3 1 N
+levelinfo -pg 1 0 110 1230
+levelinfo -hier fpga_guitar_hero_soc 120 150 500 930 1140

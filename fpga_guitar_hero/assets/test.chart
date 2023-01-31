@@ -1,0 +1,40 @@
+﻿[Song]
+{
+  Offset = 0
+  Resolution = 192
+  Player2 = bass
+  Difficulty = 0
+  PreviewStart = 0
+  PreviewEnd = 0
+  Genre = "rock"
+  MediaType = "cd"
+}
+[SyncTrack]
+{
+  0 = TS 4
+  0 = B 120000
+}
+[Events]
+{
+}
+[ExpertSingle]
+{
+  768 = N 0 0
+  960 = N 0 0
+  1152 = N 0 0
+  1248 = N 0 0
+  1344 = N 0 0
+  1440 = N 0 0
+  1536 = N 0 0
+  1584 = N 1 0
+  1632 = N 2 0
+  1680 = N 1 0
+  1728 = N 0 0
+  1920 = N 0 0
+  2112 = N 0 0
+  2304 = N 0 0
+  2352 = N 1 0
+  2400 = N 2 0
+  2448 = N 1 0
+  2496 = N 0 0
+}
